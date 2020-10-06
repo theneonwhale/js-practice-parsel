@@ -1,0 +1,24 @@
+{
+  "name": "js-practice-parsel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theneonwhale/js-practice-parsel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theneonwhale/js-practice-parsel/issues"
+  },
+  "homepage": "https://github.com/theneonwhale/js-practice-parsel#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
