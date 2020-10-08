@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/*/*.html",
-    "build": "parcel build src/*.html"
+    "build": "parcel build src/*.html --public-url /theneonwhale.github.io/js-practice-parsel/"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,21 @@
   "homepage": "https://github.com/theneonwhale/js-practice-parsel#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-custom-dist-structure": "^1.1.16",
     "parcel-plugin-handlebars-precompile": "^1.0.2"
   },
   "dependencies": {
     "lodash.throttle": "^4.1.1"
+  },
+  "customDistStructure": {
+    "config": {
+      ".css": "css",
+      ".js": "js",
+      "images": [
+        ".jpg",
+        ".svg",
+        ".png"
+      ]
+    }
   }
 }
