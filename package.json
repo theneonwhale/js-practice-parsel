@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/*.html",
+    "dev": "parcel src/*/*.html",
     "build": "parcel build src/*.html"
   },
   "repository": {
@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/theneonwhale/js-practice-parsel#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-handlebars-precompile": "^1.0.2"
+  },
+  "dependencies": {
+    "lodash.throttle": "^4.1.1"
   }
 }
