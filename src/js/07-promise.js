@@ -18,15 +18,15 @@ const promise = new Promise((resolve, reject) => {
   }, 1000);
 });
 
-promise.then(
-  onFulfilled,
-  onRejected,
+// promise.then(
+//   onFulfilled,
+//   onRejected,
 
-  //   result => console.log(result), //resolve
-  //   error => console.log(error), //reject
-);
+//   //   result => console.log(result), //resolve
+//   //   error => console.log(error), //reject
+// );
 
-console.log(promise);
+// console.log(promise);
 
 function onFulfilled(result) {
   console.log(`${result} 🐸 Everything is OK!`);
@@ -35,3 +35,51 @@ function onFulfilled(result) {
 function onRejected(error) {
   console.log(`${error} 🐷 Everything is SAD!`);
 }
+
+/*
+ * Цепочки промисов (chaining)
+ * Promise.prototype.catch(error)
+ * Promise.prototype.finally()
+ */
+
+// promise
+//   .then(result => {
+//     console.log(result);
+//     return 4;
+//   })
+//   .then(x => {
+//     console.log(x);
+//     return 5;
+//   })
+//   .then(y => {
+//     console.log(y);
+//     return 6;
+//   });
+
+// promise
+//   .then(onFulfilled, onRejected)
+//   .then(
+//     x => {
+//       console.log(x);
+//       throw Error('Error 😞  on 2 cicle');
+//       return 5;
+//     },
+//     error => console.log(error),
+//   )
+//   .then(
+//     y => console.log(y),
+//     error => console.log(error),
+//   );
+
+promise
+  .then(onFulfilled)
+  .then(x => {
+    console.log(x);
+    // throw new Error('This is error 🍼 in 2 then.');
+    return 5;
+  })
+  .then(y => console.log(y))
+  .catch(error => console.log(`${error} This is catch error 👹 .`))
+  .finally(() => {
+    console.log('This is 🦁 finnaly.');
+  });
