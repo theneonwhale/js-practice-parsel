@@ -58,12 +58,34 @@ function onMakeOrderError(error) {
  * Покемоны с https://pokeapi.co/
  */
 
-fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-  .then(r => r.json())
-  .then(pokemon => {
-    console.log(pokemon);
-  })
-  .catch(error => {
-    console.log('This is catch.');
-    console.log(error);
+// const fetchPokemonById = (id, onSuccsess, onError) => {
+//   return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
+// };
+
+// fetchPokemonById(56, onFetchSuccsess, onFetchError);
+// fetchPokemonById(2).then(onFetchSuccsess).catch(onFetchError);
+
+// function onFetchSuccsess(pokemon) {
+//   console.log(pokemon);
+// }
+
+// function onFetchError(error) {
+//   // console.log('This is catch.');
+//   console.log(error);
+// }
+
+const makePromise = () => {
+  return new Promise((resolve, reject) => {
+    const passed = Math.random() < 0.5;
+    setTimeout(() => {
+      if (passed) {
+        resolve('This is resolve 🔑');
+      }
+      reject('This is reject 🔴');
+    }, 2000);
   });
+};
+
+makePromise()
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
