@@ -205,36 +205,6 @@
         "JS"
       ],
       "rating": 9.99,
-      "id": 28
-    },
-    {
-      "title": "Test book 3",
-      "author": "Me 2",
-      "genres": [
-        "HTML",
-        "JS"
-      ],
-      "rating": 9.99,
-      "id": 29
-    },
-    {
-      "title": "Test book 3",
-      "author": "Me 2",
-      "genres": [
-        "HTML",
-        "JS"
-      ],
-      "rating": 9.99,
-      "id": 30
-    },
-    {
-      "title": "Test book 3",
-      "author": "Me 2",
-      "genres": [
-        "HTML",
-        "JS"
-      ],
-      "rating": 9.99,
       "id": 31
     },
     {
@@ -278,7 +248,7 @@
       "id": 35
     },
     {
-      "title": "Test book 3",
+      "title": "Test book 100500",
       "author": "Me 2",
       "genres": [
         "HTML",
@@ -289,7 +259,7 @@
     },
     {
       "title": "Test book 3",
-      "author": "Me 2",
+      "author": "Me 100500",
       "genres": [
         "HTML",
         "JS"
@@ -299,7 +269,7 @@
     },
     {
       "title": "Test book 3",
-      "author": "Me 2",
+      "author": "Me 100500",
       "genres": [
         "HTML",
         "JS"

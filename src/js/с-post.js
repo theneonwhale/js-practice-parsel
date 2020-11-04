@@ -24,7 +24,9 @@ addBook({
   author: 'Me 2',
   genres: ['HTML', 'JS'],
   rating: 9.99,
-}).then(renderBook);
+})
+  .then(renderBook)
+  .catch(error => console.log(erorr));
 
 function renderBook(book) {
   console.log(book);
